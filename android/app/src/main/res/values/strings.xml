@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SecurityGateApp</string>
+    <string name="title_activity_main">SecurityGateApp</string>
+    <string name="package_name">bdl.project.com</string>
+    <string name="custom_url_scheme">bdl.project.com</string>
+</resources>

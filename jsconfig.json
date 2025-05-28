@@ -1,0 +1,11 @@
+// jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react-jsx" // This is important for React JSX syntax in JS projects
+  },
+  "include": ["src"] // Tells the compiler to include files in the 'src' directory
+}
