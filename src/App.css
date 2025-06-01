@@ -1,10 +1,11 @@
 #root {
-  max-width: 1280px;
+  max-width: 1400px; /* Slightly wider max width for better content display */
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: center; /* Adjust if your app isn't strictly centered */
 }
 
+/* Logos */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -12,10 +13,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em var(--primary)); /* Use primary color for logo hover */
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Keep React logo color if desired */
 }
 
 @keyframes logo-spin {
@@ -33,10 +34,46 @@
   }
 }
 
+/* Card - if not handled by a dedicated component, ensure it aligns with theme */
 .card {
   padding: 2em;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--muted-foreground);
+}
+
+/* Dialog Modal - Refined styles */
+.dialog-modal {
+  background-color: var(--card); /* Use card background for modals */
+  border: 1px solid var(--border); /* Subtle border */
+  border-radius: var(--radius-lg); /* Slightly more rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05); /* Enhanced shadow */
+  padding: 2rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(1); /* Initial state for animation */
+  /* Add backdrop styling if the dialog component doesn't handle it */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 90vw; /* Responsive width */
+  max-height: 90vh; /* Responsive height */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Example for dialog overlay if needed, usually handled by dialog component */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Darker, semi-transparent overlay */
+  z-index: 999;
+  backdrop-filter: blur(4px); /* Subtle blur effect */
 }
